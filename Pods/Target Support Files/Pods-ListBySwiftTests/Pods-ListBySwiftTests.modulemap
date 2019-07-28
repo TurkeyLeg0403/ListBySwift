@@ -1,0 +1,6 @@
+framework module Pods_ListBySwiftTests {
+  umbrella header "Pods-ListBySwiftTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
