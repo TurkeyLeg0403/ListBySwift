@@ -25,18 +25,7 @@
                                     <constraint firstAttribute="height" constant="44" id="PrI-ie-mnV"/>
                                 </constraints>
                                 <items>
-                                    <navigationItem title="ListBySwift" id="LeJ-w9-OKc">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="RaX-RH-Lv9">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jxe-bh-m9y">
-                                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Delete"/>
-                                            </button>
-                                            <connections>
-                                                <action selector="cellDelete:" destination="BYZ-38-t0r" id="8VP-bN-WKX"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
+                                    <navigationItem title="ListBySwift" id="LeJ-w9-OKc"/>
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aOd-rH-E6z">
@@ -56,7 +45,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onb-9S-7gw">
+                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onb-9S-7gw">
                                         <rect key="frame" x="335" y="8" width="32" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="32" id="jY3-e4-pC7"/>
@@ -98,7 +87,6 @@
                     <connections>
                         <outlet property="cellAddBtn" destination="Onb-9S-7gw" id="DPa-G1-qod"/>
                         <outlet property="cellContentField" destination="YTZ-Gz-GuI" id="csd-Qe-1Zq"/>
-                        <outlet property="deleteBtn" destination="RaX-RH-Lv9" id="YNd-VD-9ia"/>
                         <outlet property="textInputView" destination="Y0c-Qf-W9t" id="xPw-lX-DMK"/>
                         <outlet property="textInputViewBottom" destination="F9Z-j2-Oc8" id="bna-Uj-3sp"/>
                         <outlet property="todoTable" destination="aOd-rH-E6z" id="mwX-qL-OJS"/>
