@@ -2,6 +2,7 @@ import RealmSwift
 
 class ItemDAO {
     let realm = try! Realm();
+
     
     public func addItem(item:Item, isUpdated:Realm.UpdatePolicy) {
         let nDAO = NumberingDAO();
@@ -22,7 +23,7 @@ class ItemDAO {
     
     public func findAll() -> Results<Item>{
         let items: Results<Item> = realm.objects(Item.self)
-        return items
+        return items.sorted(byKeyPath: "id")
     }
     
     public func deleteByCode(id: Int){

@@ -23,6 +23,7 @@ extension TodoVC: UITableViewDelegate, UITableViewDataSource {
     // cell contents
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         //set cell informations
+        print("table reload")
         let cell = tableView.dequeueReusableCell(withIdentifier: "TodoTableCell") as! TodoTableCell
         cell.content.text = self.contents[indexPath.row].value
         return cell
@@ -32,9 +33,11 @@ extension TodoVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let iDAO = ItemDAO()
-            iDAO.deleteByCode(id: contents[indexPath.row].id)
+            print("count1: \(self.contents.count)")
+            iDAO.deleteByCode(id: self.contents[indexPath.row].id)
+            print("count2: \(self.contents.count)")
+            
             tableView.reloadData()
-            tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
